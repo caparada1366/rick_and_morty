@@ -1,6 +1,17 @@
 .card{
     border: 2px solid black;
-    height: min-content;
-    width: min-content;
+    width: 20%;
+    height: 600px;
     
 }
+.card:hover{
+    background-color: rgba(255, 176, 5, 0.048);
+    border-radius: 50px;
+}
+.img{
+    
+    height: 35%;
+    
+    
+}
+

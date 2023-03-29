@@ -1,0 +1,20 @@
+.but{
+    border-radius: 15px;
+    font-size: 14px;
+    background-color: blue;
+    border: 1px solid black;
+    color: rgb(10, 10, 10);  
+    height: max-content;
+    cursor: pointer;
+}
+.but:hover {
+    background-color: rgb(240, 14, 14);
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.nav{
+    border: 2px solid red;
+    background-color: rgb(128, 235, 169);
+    height: max-content; 
+}

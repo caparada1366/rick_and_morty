@@ -1,6 +1,9 @@
 .cards_container{
    border: 2px solid blue; 
    display: flex;
-   flex-wrap: wrap;
-      
+   flex-wrap: wrap; 
+   padding: 1%;
+}
+.card{
+   padding:1%;
 }
