@@ -8,6 +8,9 @@ import {useLocation, Routes, Route, useNavigate} from 'react-router-dom'
 import About from './components/About'
 import Detail from './components/Detail'
 import Form from './components/Form/Form';
+import Favorites from './components/favorites';
+import { useDispatch } from 'react-redux';
+import { removeFav } from '../src/Redux/actions';
 
 function App() {
   
@@ -16,6 +19,7 @@ function App() {
    var userName = "hola@gmail.com";
    var password = "hola123";
    const navigate = useNavigate();
+   const dispatch = useDispatch();
    
    const[access, setAccess] = useState(false)
 
@@ -52,6 +56,7 @@ function App() {
       setCharacters((oldChars) =>{
          return oldChars.filter((ch)=>ch.id !== id)
       });
+      dispatch(removeFav(id));
    }
   
 
@@ -62,7 +67,7 @@ function App() {
             <Route path="/home"element={<Cards onClose={onClose} characters={characters} />}></Route>
             <Route path="/about"element={<About/>}></Route>
             <Route path="/detail/:id"element={<Detail/>}></Route>
-            
+            <Route path="/favorites" element={<Favorites/>}></Route>            
 
          </Routes>
          

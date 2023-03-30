@@ -2,13 +2,14 @@ import './Card.css'
 import { Link } from 'react-router-dom';
 import { addFav, removeFav } from '../Redux/actions';
 import React, {useEffect} from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { connect, useDispatch, useSelector } from 'react-redux';
 
-export function Card({id, name, status, species, gender, origin, image, onClose, myFavorites}) {
+export function Card({id, name, status, species, gender, origin, image, onClose}) {
   
    const [isFav, setIsFav] = React.useState(false);
    const dispatch = useDispatch();
-
+   const myFavorites = useSelector(state => state.myFavorites);
+   
    function handleFavorite(event){
       if(isFav === true){
          setIsFav(false)
